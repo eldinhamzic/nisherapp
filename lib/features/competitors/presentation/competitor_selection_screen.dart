@@ -5,6 +5,7 @@ import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
 import '../../../core/widgets/app_primary_button.dart';
 import '../../../core/widgets/app_text_input.dart';
+import 'viral_content_screen.dart';
 import 'competitor_card.dart';
 import 'competitor_selection_controller.dart';
 
@@ -126,9 +127,9 @@ class _CompetitorSelectionScreenState
                 enabled: selectedCount > 0,
                 onPressed: selectedCount > 0
                     ? () {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text('Next screen not implemented'),
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => const ViralContentScreen(),
                           ),
                         );
                       }
