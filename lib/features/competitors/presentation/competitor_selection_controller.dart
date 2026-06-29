@@ -3,13 +3,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../data/competitor_profile.dart';
 import '../data/mock_competitors.dart';
 
-final competitorSelectionProvider = StateNotifierProvider<
-    CompetitorSelectionController, List<CompetitorProfile>>(
-  (ref) => CompetitorSelectionController(),
+final competitorSelectionProvider =
+    NotifierProvider<CompetitorSelectionController, List<CompetitorProfile>>(
+  CompetitorSelectionController.new,
 );
 
-class CompetitorSelectionController extends StateNotifier<List<CompetitorProfile>> {
-  CompetitorSelectionController() : super(mockCompetitors);
+class CompetitorSelectionController extends Notifier<List<CompetitorProfile>> {
+  @override
+  List<CompetitorProfile> build() => mockCompetitors;
 
   void toggleSelection(String username) {
     state = [

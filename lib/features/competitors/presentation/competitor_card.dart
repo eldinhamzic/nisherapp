@@ -22,7 +22,7 @@ class CompetitorCard extends StatelessWidget {
 
     return AppCard(
       onTap: onToggle,
-      backgroundColor: isSelected ? AppColors.primaryGreen.withOpacity(0.04) : AppColors.card,
+      backgroundColor: isSelected ? AppColors.primaryGreen.withValues(alpha: 0.04) : AppColors.card,
       borderColor: isSelected ? AppColors.primaryGreen : AppColors.border,
       child: Row(
         children: [

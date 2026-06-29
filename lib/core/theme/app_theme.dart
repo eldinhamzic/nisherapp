@@ -7,7 +7,7 @@ class AppTheme {
     final colorScheme = ColorScheme.fromSeed(
       seedColor: AppColors.primaryGreen,
       brightness: Brightness.light,
-      background: AppColors.background,
+      surface: AppColors.background,
       primary: AppColors.primaryGreen,
       secondary: AppColors.accentYellow,
     );
