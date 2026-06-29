@@ -7,15 +7,15 @@ import '../../../core/widgets/app_chip.dart';
 import '../../../core/widgets/app_primary_button.dart';
 import '../data/mock_viral_content_items.dart';
 import '../data/viral_content_item.dart';
-import 'active_profiles_placeholder_screen.dart';
+import 'active_profiles_screen.dart';
 
 class ViralContentScreen extends StatelessWidget {
   const ViralContentScreen({super.key});
 
   void _openNext(BuildContext context) {
-    Navigator.of(context).push(
+      Navigator.of(context).push(
       MaterialPageRoute<void>(
-        builder: (_) => const ActiveProfilesPlaceholderScreen(),
+        builder: (_) => const ActiveProfilesScreen(),
       ),
     );
   }
